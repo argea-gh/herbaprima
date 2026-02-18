@@ -6,9 +6,15 @@
   <title>Herbaprima | Solusi Herbal Halal & Aman</title>
   <meta name="description" content="Produk herbal halal, madu alami, dan suplemen kesehatan harian — aman, edukatif, dan berbasis BPOM & MUI." />
 
-  <!-- Link manifest dan script registrasi di index.html -->
-  <link rel="manifest" href="./manifest.json">
-  <meta name="theme-color" content="#4CAF50">
+<!-- Untuk Android & Browser Modern (via manifest) -->
+<link rel="manifest" href="manifest.json">
+	
+<!-- KHUSUS UNTUK iOS (Wajib PNG) -->
+<link rel="apple-touch-icon" href="./assets/images/icons/logoherba_mob.png">
+
+<!-- Agar status bar di HP warnanya sesuai tema -->
+<meta name="theme-color" content="#4CAF50">
+<meta name="apple-mobile-web-app-status-bar-style" content="#4CAF50">
 	
   <!-- Google Fonts: Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
