@@ -1,0 +1,20 @@
+{
+  "name": "Herbaprima",
+  "short_name": "Herbaprima",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4CAF50",
+  "icons": [
+    {
+      "src": "./assets/images/icons/logoherba_mob.webp",  <-- Perhatikan path ini
+      "sizes": "192x192",
+      "type": "image/webp"
+    },
+    {
+      "src": "./assets/images/icons/logoherba_desk.webp",  <-- Perhatikan path ini
+      "sizes": "512x512",
+      "type": "image/webp"
+    }
+  ]
+}
