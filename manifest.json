@@ -7,14 +7,14 @@
   "theme_color": "#4CAF50",
   "icons": [
     {
-      "src": "./assets/images/icons/logoherba_mob.webp",  <-- Perhatikan path ini
+      "src": "./assets/images/icons/logoherba_mob.png",  <-- Perhatikan path ini
       "sizes": "192x192",
-      "type": "image/webp"
+      "type": "image/png"
     },
     {
-      "src": "./assets/images/icons/logoherba_desk.webp",  <-- Perhatikan path ini
+      "src": "./assets/images/icons/logoherba_desk.png",  <-- Perhatikan path ini
       "sizes": "512x512",
-      "type": "image/webp"
+      "type": "image/png"
     }
   ]
 }
