@@ -8,7 +8,7 @@
   "icons": [
     {
       "src": "./assets/images/icons/logoherba_mob.png",
-      "sizes": "192x192",
+      "sizes": "193x192",
       "type": "image/png"
     },
     {
@@ -17,4 +17,18 @@
       "type": "image/png"
     }
   ]
+ "screenshots": [
+  {
+    "src": "./assets/images/icons/herbaprima_ss_desk.png",
+    "sizes": "1280x720",
+    "type": "image/png",
+    "form_factor": "wide"
+  },
+  {
+    "src": "./assets/images/icons/herbaprima_ss_mob.png",
+    "sizes": "750x1334",
+    "type": "image/png",
+    "form_factor": "narrow"
+  }
+] 
 }
