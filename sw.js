@@ -6,6 +6,8 @@ const ASSETS_TO_CACHE = [
   './js/main.js',
   './images/icons/logoherba_mob.webp',
   './images/icons/logoherba_desk.webp'
+  './assets/images/icons/herbaprima_ss_desk.png',
+  './assets/images/icons/herbaprima_ss_mob.png'
 ];
 
 // Install Event
