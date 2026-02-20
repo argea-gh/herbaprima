@@ -1,7 +1,8 @@
-const CACHE_NAME = 'herbaprima-v1'; // PENTING: Ubah versi (v1, v2) saat update website
+const CACHE_NAME = 'herbaprima-v2'; // PENTING: Ubah versi dari v1 ke v2
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
+  './produk.html',
   './manifest.json',
   './assets/css/style.css',
   './assets/js/main.js',
@@ -42,16 +43,32 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Fetch Event
+// Fetch Event (Dengan penanganan navigasi)
 self.addEventListener('fetch', (event) => {
+  // Hanya tangkap request GET
+  if (event.request.method !== 'GET') return;
+
   event.respondWith(
     caches.match(event.request).then((response) => {
+      // Jika ada di cache, return dari cache
       if (response) {
         return response;
       }
-      return fetch(event.request);
-    }).catch((err) => {
-      console.log('SW: Fetch failed:', err);
+      
+      // Jika tidak ada di cache, fetch dari network
+      return fetch(event.request).then((networkResponse) => {
+        // Clone response untuk disimpan di cache
+        const responseToCache = networkResponse.clone();
+        caches.open(CACHE_NAME).then((cache) => {
+          cache.put(event.request, responseToCache);
+        });
+        return networkResponse;
+      }).catch(() => {
+        // Fallback jika offline dan tidak ada di cache
+        if (event.request.mode === 'navigate') {
+          return caches.match('./index.html');
+        }
+      });
     })
   );
 });
